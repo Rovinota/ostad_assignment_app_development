@@ -425,11 +425,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundColor: Colors.red,
               ),
               onPressed: (){
-                final snackBar = SnackBar(
-                  content: Text('Congratulations!!\nYou Have bought ${items} items.\nPrice: ${total_amount} Dollars.'),
-                  duration: Duration(seconds: 2), // You can set the duration of the Snackbar
-                );
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                if (total_amount > 0) {
+                  final snackBar = SnackBar(
+                    content: Text('Congratulations!!\nYou Have bought ${items} items.\nPrice: ${total_amount} Dollars.'),
+                    duration: Duration(seconds: 4), // You can set the duration of the Snackbar
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
+                else {
+                  final snackBar = SnackBar(
+                    content: Text('Sorry!!\nYou have not bought any item yet'),
+                    duration: Duration(seconds: 4), // You can set the duration of the Snackbar
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
               }, child: Text("Check out"),
 
             ),
@@ -822,11 +831,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   backgroundColor: Colors.red,
                 ),
                 onPressed: (){
-                  final snackBar = SnackBar(
-                    content: Text('Congratulations!!\nYou Have Bought ${items} Items\nPrice: ${total_amount} Dollars.'),
-                    duration: Duration(seconds: 2), // You can set the duration of the Snackbar
-                  );
-                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  if (total_amount > 0) {
+                    final snackBar = SnackBar(
+                      content: Text('Congratulations!!\nYou Have bought ${items} items.\nPrice: ${total_amount} Dollars.'),
+                      duration: Duration(seconds: 4), // You can set the duration of the Snackbar
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  }
+                  else {
+                    final snackBar = SnackBar(
+                      content: Text('Sorry!!\nYou have not bought any item yet'),
+                      duration: Duration(seconds: 4), // You can set the duration of the Snackbar
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  }
                 }, child: Text("Check out"),
 
               ),
