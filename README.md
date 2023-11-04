@@ -1,7 +1,7 @@
 # ostad_assignment_app_development
 
 
-https://github.com/Rovinota/ostad_assignment_app_development/assets/137815717/25e6b1cb-71d0-4f75-9d27-6b3bda401260
+
 
 
 A new Flutter project.
